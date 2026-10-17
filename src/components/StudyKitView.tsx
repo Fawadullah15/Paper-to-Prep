@@ -280,39 +280,39 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
   };
 
   return (
-    <div className={`space-y-8 ${isFocusMode ? 'max-w-[68ch] mx-auto' : 'max-w-4xl'}`}>
+    <div className={`space-y-6 sm:space-y-8 w-full max-w-full overflow-hidden ${isFocusMode ? 'max-w-[68ch] mx-auto' : 'max-w-4xl'}`}>
       
       {/* Top Banner: Action Bar & Document Badge */}
-      <div className="bg-white rounded-xl border border-[#E7EAF0] p-4 flex flex-wrap items-center justify-between gap-3 shadow-xs">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-[#F0EEFF] text-[#6259E8] flex items-center justify-center font-bold">
+      <div className="bg-white rounded-xl border border-[#E7EAF0] p-3.5 sm:p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 shadow-xs max-w-full overflow-hidden">
+        <div className="flex items-center gap-2.5 min-w-0">
+          <div className="w-8 h-8 rounded-lg bg-[#F0EEFF] text-[#6259E8] flex items-center justify-center font-bold shrink-0">
             <Sparkles className="w-4 h-4" />
           </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-[14px] font-bold text-[#172033] truncate max-w-md">
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+              <span className="text-[13px] sm:text-[14px] font-bold text-[#172033] truncate max-w-[180px] xs:max-w-xs sm:max-w-md">
                 {studyKit.paperTitle}
               </span>
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-[#F0EEFF] text-[#6259E8]">
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-[#F0EEFF] text-[#6259E8] shrink-0">
                 {studyKit.sourceType === 'pdf' ? 'PDF Verified' : 'Text Analyzed'}
               </span>
             </div>
-            <p className="text-[12px] text-[#687386]">
+            <p className="text-[11px] sm:text-[12px] text-[#687386] truncate">
               All 4 required resources generated together in one coordinated workflow
             </p>
           </div>
         </div>
 
         {/* Global Export Buttons */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <button
             onClick={handleCopyCompleteKit}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[12px] font-medium text-[#172033] bg-[#F8F9FC] border border-[#E7EAF0] rounded-md hover:bg-white transition-colors"
+            className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-[12px] font-medium text-[#172033] bg-[#F8F9FC] border border-[#E7EAF0] rounded-md hover:bg-white transition-colors"
           >
             {copiedSection === 'complete-kit' ? (
               <>
                 <Check className="w-3.5 h-3.5 text-[#198754]" />
-                <span className="text-[#198754] font-semibold">Copied Complete Kit</span>
+                <span className="text-[#198754] font-semibold">Copied Kit</span>
               </>
             ) : (
               <>
@@ -324,7 +324,7 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
 
           <button
             onClick={handleDownloadTxt}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[12px] font-medium text-white bg-[#6259E8] hover:bg-[#5147D8] rounded-md transition-colors shadow-xs"
+            className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-[12px] font-medium text-white bg-[#6259E8] hover:bg-[#5147D8] rounded-md transition-colors shadow-xs"
           >
             <Download className="w-3.5 h-3.5" />
             <span>Download .TXT</span>
@@ -333,18 +333,18 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
       </div>
 
       {/* RESOURCE 1: Exactly 50-Word English Summary */}
-      <section className="bg-white rounded-xl border border-[#E7EAF0] p-6 shadow-xs space-y-3">
-        <div className="flex items-center justify-between pb-3 border-b border-[#E7EAF0]">
-          <div className="flex items-center gap-2">
-            <span className="w-6 h-6 rounded-md bg-[#6259E8] text-white flex items-center justify-center text-[12px] font-bold">
+      <section className="bg-white rounded-xl border border-[#E7EAF0] p-4 sm:p-6 shadow-xs space-y-3 max-w-full overflow-hidden">
+        <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#E7EAF0]">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="w-6 h-6 rounded-md bg-[#6259E8] text-white flex items-center justify-center text-[12px] font-bold shrink-0">
               1
             </span>
-            <h3 className="text-[16px] font-semibold text-[#172033]">
+            <h3 className="text-[15px] sm:text-[16px] font-semibold text-[#172033] truncate">
               Beginner-Friendly English Summary
             </h3>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             {/* Word count badge */}
             <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold ${
               studyKit.wordCount === 50 
@@ -365,23 +365,23 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
           </div>
         </div>
 
-        <p className="text-[15px] sm:text-[16px] leading-[28px] text-[#172033] font-medium">
+        <p className="text-[14px] sm:text-[16px] leading-[26px] sm:leading-[28px] text-[#172033] font-medium break-words">
           {studyKit.englishSummary}
         </p>
       </section>
 
       {/* RESOURCE 2: Natural Roman Urdu Translation & Real Voice Audio */}
-      <section className="bg-white rounded-xl border border-[#E7EAF0] p-6 shadow-xs space-y-4">
-        <div className="flex items-center justify-between pb-3 border-b border-[#E7EAF0]">
-          <div className="flex items-center gap-2">
-            <span className="w-6 h-6 rounded-md bg-[#6259E8] text-white flex items-center justify-center text-[12px] font-bold">
+      <section className="bg-white rounded-xl border border-[#E7EAF0] p-4 sm:p-6 shadow-xs space-y-4 max-w-full overflow-hidden">
+        <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#E7EAF0]">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="w-6 h-6 rounded-md bg-[#6259E8] text-white flex items-center justify-center text-[12px] font-bold shrink-0">
               2
             </span>
-            <div>
-              <h3 className="text-[16px] font-semibold text-[#172033]">
+            <div className="min-w-0">
+              <h3 className="text-[15px] sm:text-[16px] font-semibold text-[#172033] truncate">
                 Natural Roman Urdu Translation & Speech
               </h3>
-              <p className="text-[11px] text-[#687386]">
+              <p className="text-[11px] text-[#687386] truncate">
                 Latin alphabet Urdu with native Web Speech synthesis playback
               </p>
             </div>
@@ -389,7 +389,7 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
 
           <button
             onClick={() => copyToClipboard(studyKit.romanUrduSummary, 'ur-summary')}
-            className="p-1.5 text-[#687386] hover:text-[#6259E8] rounded-md hover:bg-[#F8F9FC] transition-colors"
+            className="p-1.5 text-[#687386] hover:text-[#6259E8] rounded-md hover:bg-[#F8F9FC] transition-colors shrink-0"
             title="Copy Roman Urdu translation"
           >
             {copiedSection === 'ur-summary' ? <Check className="w-4 h-4 text-[#198754]" /> : <Copy className="w-4 h-4" />}
@@ -397,21 +397,21 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
         </div>
 
         {/* Roman Urdu Content Box */}
-        <div className="p-4 bg-[#F8F9FC] rounded-lg border border-[#E7EAF0]">
-          <p className="text-[15px] sm:text-[16px] leading-[28px] text-[#172033] italic">
+        <div className="p-3.5 sm:p-4 bg-[#F8F9FC] rounded-lg border border-[#E7EAF0] max-w-full overflow-hidden">
+          <p className="text-[14px] sm:text-[16px] leading-[26px] sm:leading-[28px] text-[#172033] italic break-words">
             "{studyKit.romanUrduSummary}"
           </p>
         </div>
 
         {/* Dedicated Roman Urdu TTS Audio Controller Bar */}
-        <div className="p-3.5 bg-[#F0EEFF]/80 rounded-xl border border-[#6259E8]/20 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+        <div className="p-3 sm:p-3.5 bg-[#F0EEFF]/80 rounded-xl border border-[#6259E8]/20 flex flex-wrap items-center justify-between gap-2.5 sm:gap-3 max-w-full overflow-hidden">
           
           {/* Play / Pause / Replay / Stop buttons */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
             {!isPlaying ? (
               <button
                 onClick={handlePlayRomanUrdu}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#6259E8] hover:bg-[#5147D8] text-white text-[12px] font-semibold transition-all shadow-xs active:scale-95"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg bg-[#6259E8] hover:bg-[#5147D8] text-white text-[11px] sm:text-[12px] font-semibold transition-all shadow-xs active:scale-95 shrink-0"
               >
                 <Play className="w-3.5 h-3.5 fill-white ml-0.5" />
                 <span>{isPaused ? 'Resume Voice' : 'Listen Roman Urdu'}</span>
@@ -419,7 +419,7 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
             ) : (
               <button
                 onClick={handlePauseSpeech}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#172033] hover:bg-[#273044] text-white text-[12px] font-semibold transition-all shadow-xs"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg bg-[#172033] hover:bg-[#273044] text-white text-[11px] sm:text-[12px] font-semibold transition-all shadow-xs shrink-0"
               >
                 <Pause className="w-3.5 h-3.5 fill-white" />
                 <span>Pause</span>
@@ -508,46 +508,46 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
       </section>
 
       {/* RESOURCE 3: Exactly 10 Difficult Words Dictionary */}
-      <section className="bg-white rounded-xl border border-[#E7EAF0] p-6 shadow-xs space-y-4">
-        <div className="flex items-center justify-between pb-3 border-b border-[#E7EAF0]">
-          <div className="flex items-center gap-2">
-            <span className="w-6 h-6 rounded-md bg-[#6259E8] text-white flex items-center justify-center text-[12px] font-bold">
+      <section className="bg-white rounded-xl border border-[#E7EAF0] p-4 sm:p-6 shadow-xs space-y-4 max-w-full overflow-hidden">
+        <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#E7EAF0]">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="w-6 h-6 rounded-md bg-[#6259E8] text-white flex items-center justify-center text-[12px] font-bold shrink-0">
               3
             </span>
-            <div>
-              <h3 className="text-[16px] font-semibold text-[#172033]">
+            <div className="min-w-0">
+              <h3 className="text-[15px] sm:text-[16px] font-semibold text-[#172033] truncate">
                 10 Difficult Words & Roman Urdu Meanings
               </h3>
-              <p className="text-[11px] text-[#687386]">
+              <p className="text-[11px] text-[#687386] truncate">
                 Extracted directly from the submitted document with paper context
               </p>
             </div>
           </div>
 
-          <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-[#F0EEFF] text-[#6259E8]">
+          <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-[#F0EEFF] text-[#6259E8] shrink-0">
             {studyKit.vocabulary.length} Vocabulary Items
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-full">
           {studyKit.vocabulary.map((item, idx) => (
             <div 
               key={idx}
-              className="p-3.5 bg-[#F8F9FC] border border-[#E7EAF0] rounded-xl hover:border-[#D6DAE1] transition-all space-y-2 group"
+              className="p-3.5 bg-[#F8F9FC] border border-[#E7EAF0] rounded-xl hover:border-[#D6DAE1] transition-all space-y-2 group min-w-0 overflow-hidden"
             >
               <div className="flex items-start justify-between gap-2">
-                <div className="flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-[#E0DEEF] text-[#493DCE] text-[11px] font-bold flex items-center justify-center">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="w-5 h-5 rounded-full bg-[#E0DEEF] text-[#493DCE] text-[11px] font-bold flex items-center justify-center shrink-0">
                     {idx + 1}
                   </span>
-                  <h4 className="text-[14px] font-bold text-[#172033]">
+                  <h4 className="text-[14px] font-bold text-[#172033] truncate">
                     {item.word}
                   </h4>
                 </div>
 
                 <button
                   onClick={() => copyToClipboard(`${item.word}: ${item.romanUrduMeaning} — ${item.contextualExplanation}`, `word-${idx}`)}
-                  className="opacity-0 group-hover:opacity-100 p-1 text-[#687386] hover:text-[#6259E8] transition-opacity"
+                  className="sm:opacity-0 group-hover:opacity-100 p-1 text-[#687386] hover:text-[#6259E8] transition-opacity shrink-0"
                   title="Copy vocabulary item"
                 >
                   {copiedSection === `word-${idx}` ? <Check className="w-3.5 h-3.5 text-[#198754]" /> : <Copy className="w-3.5 h-3.5 text-[#687386]" />}
@@ -555,18 +555,18 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
               </div>
 
               {/* Roman Urdu Meaning */}
-              <div className="text-[13px] font-semibold text-[#6259E8]">
+              <div className="text-[13px] font-semibold text-[#6259E8] break-words">
                 Roman Urdu: <span className="font-medium text-[#172033]">{item.romanUrduMeaning}</span>
               </div>
 
               {/* Contextual Explanation in Paper */}
-              <p className="text-[12px] leading-relaxed text-[#464554]">
+              <p className="text-[12px] leading-relaxed text-[#464554] break-words">
                 {item.contextualExplanation}
               </p>
 
               {/* Source Context quote */}
               {item.sourceContext && (
-                <div className="text-[11px] font-mono text-[#687386] bg-white p-2 rounded border border-[#E7EAF0] italic">
+                <div className="text-[11px] font-mono text-[#687386] bg-white p-2 rounded border border-[#E7EAF0] italic break-words">
                   "{item.sourceContext}"
                 </div>
               )}
@@ -576,55 +576,55 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
       </section>
 
       {/* RESOURCE 4: Exactly 5 Examination Practice Questions */}
-      <section className="bg-white rounded-xl border border-[#E7EAF0] p-6 shadow-xs space-y-4">
-        <div className="flex items-center justify-between pb-3 border-b border-[#E7EAF0]">
-          <div className="flex items-center gap-2">
-            <span className="w-6 h-6 rounded-md bg-[#6259E8] text-white flex items-center justify-center text-[12px] font-bold">
+      <section className="bg-white rounded-xl border border-[#E7EAF0] p-4 sm:p-6 shadow-xs space-y-4 max-w-full overflow-hidden">
+        <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#E7EAF0]">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="w-6 h-6 rounded-md bg-[#6259E8] text-white flex items-center justify-center text-[12px] font-bold shrink-0">
               4
             </span>
-            <div>
-              <h3 className="text-[16px] font-semibold text-[#172033]">
+            <div className="min-w-0">
+              <h3 className="text-[15px] sm:text-[16px] font-semibold text-[#172033] truncate">
                 5 Examination Practice Questions & Answers
               </h3>
-              <p className="text-[11px] text-[#687386]">
+              <p className="text-[11px] text-[#687386] truncate">
                 Grounded in the research paper's methodology and findings
               </p>
             </div>
           </div>
 
-          <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-[#F0EEFF] text-[#6259E8]">
+          <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-[#F0EEFF] text-[#6259E8] shrink-0">
             {studyKit.questions.length} Practice Questions
           </span>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-3 max-w-full">
           {studyKit.questions.map((q, idx) => {
             const isExpanded = Boolean(expandedQuestions[idx]);
             return (
               <div 
                 key={idx}
-                className="border border-[#E7EAF0] rounded-xl overflow-hidden transition-all bg-[#F8F9FC]/60"
+                className="border border-[#E7EAF0] rounded-xl overflow-hidden transition-all bg-[#F8F9FC]/60 max-w-full"
               >
                 {/* Question Header */}
                 <button
                   onClick={() => toggleQuestion(idx)}
-                  className="w-full text-left p-4 bg-white hover:bg-[#F8F9FC] flex items-start justify-between gap-3 transition-colors"
+                  className="w-full text-left p-3.5 sm:p-4 bg-white hover:bg-[#F8F9FC] flex items-start justify-between gap-2.5 sm:gap-3 transition-colors"
                 >
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-2.5 sm:gap-3 min-w-0 flex-1">
                     <span className="w-5 h-5 rounded-full bg-[#F0EEFF] text-[#6259E8] text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">
                       Q{idx + 1}
                     </span>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <span className="inline-block px-2 py-0.2 rounded text-[10px] font-semibold uppercase tracking-wider bg-[#E0DEEF] text-[#493DCE] mb-1">
                         {q.type}
                       </span>
-                      <h4 className="text-[14px] sm:text-[15px] font-semibold text-[#172033] leading-snug">
+                      <h4 className="text-[13px] sm:text-[15px] font-semibold text-[#172033] leading-snug break-words">
                         {q.question}
                       </h4>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 shrink-0">
+                  <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
                     <button
                       type="button"
                       onClick={(e) => {
@@ -634,7 +634,7 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
                       className="p-1 text-[#687386] hover:text-[#6259E8] transition-colors"
                       title="Copy Q&A"
                     >
-                      {copiedSection === `q-${idx}` ? <Check className="w-3.5 h-3.5 text-[#198754]" /> : <Copy className="w-3.5 h-3.5" />}
+                      {copiedSection === `q-${idx}` ? <Check className="w-3.5 h-3.5 text-[#198754]" /> : <Copy className="w-3.5 h-3.5 text-[#687386]" />}
                     </button>
                     {isExpanded ? <ChevronUp className="w-4 h-4 text-[#687386]" /> : <ChevronDown className="w-4 h-4 text-[#687386]" />}
                   </div>
@@ -642,11 +642,11 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
 
                 {/* Expanded Answer */}
                 {isExpanded && (
-                  <div className="p-4 bg-[#F8F9FC] border-t border-[#E7EAF0] space-y-1.5 animate-in fade-in duration-150">
+                  <div className="p-3.5 sm:p-4 bg-[#F8F9FC] border-t border-[#E7EAF0] space-y-1.5 animate-in fade-in duration-150 max-w-full overflow-hidden">
                     <span className="text-[11px] font-bold uppercase tracking-wider text-[#198754] block">
                       Grounded Answer:
                     </span>
-                    <p className="text-[13px] sm:text-[14px] leading-relaxed text-[#172033]">
+                    <p className="text-[13px] sm:text-[14px] leading-relaxed text-[#172033] break-words">
                       {q.answer}
                     </p>
                   </div>

@@ -184,22 +184,22 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
         >
           
           {/* FRONT OF CARD */}
-          <div className="absolute inset-0 w-full h-full p-8 flex flex-col justify-between backface-hidden bg-white rounded-2xl">
+          <div className="absolute inset-0 w-full h-full p-4 sm:p-8 flex flex-col justify-between backface-hidden bg-white rounded-2xl">
             
             {/* Front Header */}
-            <div className="flex items-center justify-between">
-              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-[#F0EEFF] text-[#6259E8]">
+            <div className="flex items-center justify-between gap-2">
+              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-[#F0EEFF] text-[#6259E8] truncate max-w-[150px]">
                 {activeCard?.category}
               </span>
-              <div className="flex items-center gap-1 text-[11px] font-semibold text-[#687386] bg-[#F8F9FC] px-2 py-0.5 rounded-md border border-[#E7EAF0]">
+              <div className="flex items-center gap-1 text-[11px] font-semibold text-[#687386] bg-[#F8F9FC] px-2 py-0.5 rounded-md border border-[#E7EAF0] shrink-0">
                 <Clock className="w-3 h-3 text-[#6259E8]" />
                 <span>Interval: {activeCard?.srsInterval}</span>
               </div>
             </div>
 
             {/* Front Question Content */}
-            <div className="my-auto py-6">
-              <h3 className="text-[20px] sm:text-[22px] font-semibold text-[#172033] leading-relaxed tracking-tight">
+            <div className="my-auto py-4 sm:py-6">
+              <h3 className="text-[17px] sm:text-[22px] font-semibold text-[#172033] leading-snug sm:leading-relaxed tracking-tight break-words">
                 {activeCard?.front}
               </h3>
 
@@ -240,7 +240,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
           </div>
 
           {/* BACK OF CARD */}
-          <div className="absolute inset-0 w-full h-full p-8 flex flex-col justify-between backface-hidden rotate-y-180 bg-white rounded-2xl">
+          <div className="absolute inset-0 w-full h-full p-4 sm:p-8 flex flex-col justify-between backface-hidden rotate-y-180 bg-white rounded-2xl">
             
             {/* Back Header */}
             <div className="flex items-center justify-between">
@@ -253,8 +253,8 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
             </div>
 
             {/* Back Answer Content */}
-            <div className="my-auto py-4">
-              <div className="text-[15px] sm:text-[16px] leading-[26px] text-[#172033] font-normal">
+            <div className="my-auto py-3 sm:py-4">
+              <div className="text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#172033] font-normal break-words">
                 {activeCard?.back}
               </div>
             </div>
@@ -262,42 +262,42 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
             {/* SRS Rating Buttons on Back */}
             <div 
               onClick={(e) => e.stopPropagation()} 
-              className="pt-4 border-t border-[#E7EAF0] space-y-2"
+              className="pt-3 sm:pt-4 border-t border-[#E7EAF0] space-y-2"
             >
-              <div className="text-[11px] font-semibold uppercase tracking-wider text-[#687386] text-center">
+              <div className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#687386] text-center">
                 Rate Retention (1-4)
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2">
                 <button
                   onClick={() => handleRate('Again (<10m)')}
-                  className="py-2 px-2 rounded-lg bg-[#FFDAD6]/50 hover:bg-[#FFDAD6] border border-[#ba1a1a]/20 text-[#ba1a1a] text-[12px] font-semibold flex flex-col items-center transition-all active:scale-95"
+                  className="py-1.5 sm:py-2 px-1.5 sm:px-2 rounded-lg bg-[#FFDAD6]/50 hover:bg-[#FFDAD6] border border-[#ba1a1a]/20 text-[#ba1a1a] text-[11px] sm:text-[12px] font-semibold flex flex-col items-center transition-all active:scale-95"
                 >
                   <span>Again</span>
-                  <span className="text-[10px] font-normal text-[#ba1a1a]/80">&lt;10m (Key 1)</span>
+                  <span className="text-[9px] sm:text-[10px] font-normal text-[#ba1a1a]/80">&lt;10m (1)</span>
                 </button>
 
                 <button
                   onClick={() => handleRate('Hard (1d)')}
-                  className="py-2 px-2 rounded-lg bg-[#F8F9FC] hover:bg-[#E7EAF0] border border-[#E7EAF0] text-[#172033] text-[12px] font-semibold flex flex-col items-center transition-all active:scale-95"
+                  className="py-1.5 sm:py-2 px-1.5 sm:px-2 rounded-lg bg-[#F8F9FC] hover:bg-[#E7EAF0] border border-[#E7EAF0] text-[#172033] text-[11px] sm:text-[12px] font-semibold flex flex-col items-center transition-all active:scale-95"
                 >
                   <span>Hard</span>
-                  <span className="text-[10px] font-normal text-[#687386]">1 day (Key 2)</span>
+                  <span className="text-[9px] sm:text-[10px] font-normal text-[#687386]">1 day (2)</span>
                 </button>
 
                 <button
                   onClick={() => handleRate('Good (3d)')}
-                  className="py-2 px-2 rounded-lg bg-[#F0EEFF] hover:bg-[#E0DEEF] border border-[#6259E8]/20 text-[#6259E8] text-[12px] font-semibold flex flex-col items-center transition-all active:scale-95"
+                  className="py-1.5 sm:py-2 px-1.5 sm:px-2 rounded-lg bg-[#F0EEFF] hover:bg-[#E0DEEF] border border-[#6259E8]/20 text-[#6259E8] text-[11px] sm:text-[12px] font-semibold flex flex-col items-center transition-all active:scale-95"
                 >
                   <span>Good</span>
-                  <span className="text-[10px] font-normal text-[#6259E8]/80">3 days (Key 3)</span>
+                  <span className="text-[9px] sm:text-[10px] font-normal text-[#6259E8]/80">3 days (3)</span>
                 </button>
 
                 <button
                   onClick={() => handleRate('Easy (7d)')}
-                  className="py-2 px-2 rounded-lg bg-[#198754]/10 hover:bg-[#198754]/20 border border-[#198754]/20 text-[#198754] text-[12px] font-semibold flex flex-col items-center transition-all active:scale-95"
+                  className="py-1.5 sm:py-2 px-1.5 sm:px-2 rounded-lg bg-[#198754]/10 hover:bg-[#198754]/20 border border-[#198754]/20 text-[#198754] text-[11px] sm:text-[12px] font-semibold flex flex-col items-center transition-all active:scale-95"
                 >
                   <span>Easy</span>
-                  <span className="text-[10px] font-normal text-[#198754]/80">7 days (Key 4)</span>
+                  <span className="text-[9px] sm:text-[10px] font-normal text-[#198754]/80">7 days (4)</span>
                 </button>
               </div>
             </div>
@@ -308,22 +308,22 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
       </div>
 
       {/* Navigation Arrow Bar */}
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex items-center justify-between gap-2 sm:gap-4">
         <button
           onClick={handlePrev}
-          className="inline-flex items-center gap-1.5 px-4 h-[38px] text-[13px] font-medium text-[#172033] bg-white border border-[#E7EAF0] rounded-md hover:bg-[#F8F9FC] transition-colors"
+          className="inline-flex items-center gap-1.5 px-3 sm:px-4 h-[36px] sm:h-[38px] text-[12px] sm:text-[13px] font-medium text-[#172033] bg-white border border-[#E7EAF0] rounded-md hover:bg-[#F8F9FC] transition-colors"
         >
           <ChevronLeft className="w-4 h-4" />
           <span>Previous</span>
         </button>
 
-        <div className="text-[12px] text-[#687386] font-medium">
+        <div className="text-[11px] sm:text-[12px] text-[#687386] font-medium hidden sm:block">
           Use ← / → arrows to navigate · Space to flip
         </div>
 
         <button
           onClick={handleNext}
-          className="inline-flex items-center gap-1.5 px-4 h-[38px] text-[13px] font-medium text-[#172033] bg-white border border-[#E7EAF0] rounded-md hover:bg-[#F8F9FC] transition-colors"
+          className="inline-flex items-center gap-1.5 px-3 sm:px-4 h-[36px] sm:h-[38px] text-[12px] sm:text-[13px] font-medium text-[#172033] bg-white border border-[#E7EAF0] rounded-md hover:bg-[#F8F9FC] transition-colors"
         >
           <span>Next</span>
           <ChevronRight className="w-4 h-4" />

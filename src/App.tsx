@@ -108,26 +108,46 @@ export default function App() {
       />
 
       {/* Main Container Layout */}
-      <main className="max-w-7xl mx-auto px-4 lg:px-8 py-6 flex-1 w-full">
+      <main className="max-w-7xl mx-auto px-2.5 sm:px-4 lg:px-8 py-3.5 sm:py-6 flex-1 w-full max-w-full overflow-x-hidden">
         
         {/* Mobile Subheader & Drawer Trigger */}
-        <div className="lg:hidden flex items-center justify-between pb-4 border-b border-[#E7EAF0] mb-4">
-          <button
-            onClick={() => setMobileDrawerOpen(!mobileDrawerOpen)}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-[#E7EAF0] rounded-md text-[13px] font-medium text-[#172033]"
-          >
-            {mobileDrawerOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-            <span>Paper Outline & Metadata</span>
-          </button>
+        <div className="md:hidden flex flex-col gap-2.5 pb-3 border-b border-[#E7EAF0] mb-4 max-w-full">
+          <div className="flex items-center justify-between gap-2">
+            <button
+              onClick={() => setMobileDrawerOpen(!mobileDrawerOpen)}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-[#E7EAF0] rounded-md text-[12px] font-medium text-[#172033]"
+            >
+              {mobileDrawerOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+              <span>Outline & Modules</span>
+            </button>
 
-          <span className="text-[12px] font-medium text-[#687386]">
-            Mastery: <span className="font-semibold text-[#6259E8]">{masteryPercentage}%</span>
-          </span>
+            <span className="text-[11px] font-medium text-[#687386]">
+              Mastery: <span className="font-semibold text-[#6259E8]">{masteryPercentage}%</span>
+            </span>
+          </div>
+
+          {/* Mobile Paper Selector */}
+          <div className="relative w-full">
+            <select
+              value={currentPaper.id}
+              onChange={(e) => {
+                const found = papers.find(p => p.id === e.target.value);
+                if (found) handleSelectPaper(found);
+              }}
+              className="w-full h-[36px] px-3 text-[12px] font-medium text-[#172033] bg-white border border-[#E7EAF0] rounded-md focus:outline-none focus:border-[#6259E8] truncate cursor-pointer"
+            >
+              {papers.map((p) => (
+                <option key={p.id} value={p.id}>
+                  📄 {p.title} ({p.year})
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
         {/* Mobile Drawer view */}
         {mobileDrawerOpen && (
-          <div className="lg:hidden mb-6 p-4 bg-white rounded-xl border border-[#E7EAF0] shadow-sm">
+          <div className="lg:hidden mb-6 p-3 sm:p-4 bg-white rounded-xl border border-[#E7EAF0] shadow-sm animate-in fade-in max-w-full overflow-hidden">
             <LeftSourceRail
               paper={currentPaper}
               activeTab={activeTab}
@@ -144,7 +164,7 @@ export default function App() {
         )}
 
         {/* Responsive Desktop 12-Column Grid Workspace */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-start max-w-full">
           
           {/* LEFT RAIL (3 cols on desktop): Paper Metadata, Outline, Methodology */}
           {!isFocusMode && (
@@ -165,7 +185,7 @@ export default function App() {
               : activeTab === 'graph'
               ? 'lg:col-span-9 xl:col-span-9'
               : 'lg:col-span-6 xl:col-span-6'
-          } space-y-6 min-w-0`}>
+          } space-y-4 sm:space-y-6 min-w-0 max-w-full`}>
 
             {/* Main Research Paper Input Hero Card (Paste Text or Upload PDF) */}
             <PaperInputCard
@@ -175,7 +195,7 @@ export default function App() {
             />
 
             {/* Segmented View Switcher Tabs (Enclosed segmented pill track with #F8F9FC background) */}
-            <div className="bg-[#F1F3FF] p-1 rounded-xl border border-[#E7EAF0] flex items-center overflow-x-auto shadow-2xs">
+            <div className="bg-[#F1F3FF] p-1 rounded-xl border border-[#E7EAF0] flex items-center overflow-x-auto no-scrollbar shadow-2xs max-w-full touch-pan-x">
               {[
                 { id: 'studykit', label: 'Study Kit (4-in-1)', icon: Sparkles },
                 { id: 'summary', label: 'Summary', icon: FileText },
@@ -192,7 +212,7 @@ export default function App() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id as StudyTab)}
-                    className={`flex-1 min-w-max px-3 py-2 rounded-lg text-[13px] flex items-center justify-center gap-1.5 transition-all ${
+                    className={`shrink-0 min-w-max px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg text-[12px] sm:text-[13px] flex items-center justify-center gap-1.5 transition-all ${
                       isActive
                         ? 'bg-white text-[#172033] font-semibold shadow-xs'
                         : 'text-[#687386] hover:text-[#172033]'
@@ -201,7 +221,7 @@ export default function App() {
                     <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#6259E8]' : 'text-[#687386]'}`} />
                     <span>{tab.label}</span>
                     {tab.count !== undefined && (
-                      <span className={`text-[11px] px-1.5 py-0.2 rounded-full font-mono ${
+                      <span className={`text-[10px] sm:text-[11px] px-1.5 py-0.2 rounded-full font-mono ${
                         isActive ? 'bg-[#F0EEFF] text-[#6259E8]' : 'bg-[#E7EAF0] text-[#687386]'
                       }`}>
                         {tab.count}

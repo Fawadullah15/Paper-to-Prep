@@ -97,7 +97,9 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
     if (!svgRef.current || !containerRef.current) return;
 
     const width = containerRef.current.clientWidth || 800;
-    const height = 580;
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+    const isTablet = typeof window !== 'undefined' && window.innerWidth < 1024;
+    const height = isMobile ? 380 : isTablet ? 480 : 580;
 
     const svg = d3.select(svgRef.current)
       .attr('width', width)
@@ -437,10 +439,10 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
     <div className={`space-y-4 ${isFocusMode ? 'max-w-[68ch] mx-auto' : 'max-w-6xl'}`}>
       
       {/* Top Controls & Filter Bar */}
-      <div className="bg-white rounded-xl border border-[#E7EAF0] p-3.5 shadow-xs flex flex-wrap items-center justify-between gap-3">
+      <div className="bg-white rounded-xl border border-[#E7EAF0] p-3 sm:p-3.5 shadow-xs flex flex-wrap items-center justify-between gap-2.5 sm:gap-3 max-w-full overflow-hidden">
         
         {/* Search within graph */}
-        <div className="relative flex-1 min-w-[220px] max-w-sm">
+        <div className="relative w-full sm:w-auto min-w-0 sm:min-w-[200px] flex-1 max-w-sm">
           <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#687386]" />
           <input
             type="text"
@@ -452,10 +454,10 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
         </div>
 
         {/* Group Filter pills */}
-        <div className="flex items-center gap-1.5 overflow-x-auto text-[11px] font-semibold">
+        <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar max-w-full text-[11px] font-semibold py-0.5">
           <button
             onClick={() => setFilterGroup('all')}
-            className={`px-2.5 py-1 rounded-full uppercase tracking-wider transition-all ${
+            className={`px-2.5 py-1 rounded-full uppercase tracking-wider whitespace-nowrap transition-all shrink-0 ${
               filterGroup === 'all'
                 ? 'bg-[#6259E8] text-white shadow-xs'
                 : 'bg-[#F8F9FC] text-[#687386] hover:text-[#172033] border border-[#E7EAF0]'
@@ -467,7 +469,7 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
             <button
               key={grp}
               onClick={() => setFilterGroup(grp)}
-              className={`px-2.5 py-1 rounded-full uppercase tracking-wider whitespace-nowrap transition-all ${
+              className={`px-2.5 py-1 rounded-full uppercase tracking-wider whitespace-nowrap transition-all shrink-0 ${
                 filterGroup === grp
                   ? 'bg-[#6259E8] text-white shadow-xs'
                   : 'bg-[#F8F9FC] text-[#687386] hover:text-[#172033] border border-[#E7EAF0]'
@@ -479,7 +481,7 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
         </div>
 
         {/* Canvas Toolbar Controls */}
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1.5 shrink-0">
           <button
             onClick={togglePhysics}
             title={isPhysicsRunning ? "Pause graph layout physics" : "Resume physics simulation"}
@@ -513,31 +515,31 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
       </div>
 
       {/* Main Workspace Area: SVG Graph on left, Node Inspector panel on right */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start max-w-full">
         
         {/* D3 Graph Visualization Canvas */}
         <div 
           ref={containerRef}
-          className="lg:col-span-8 bg-white rounded-xl border border-[#E7EAF0] shadow-xs relative overflow-hidden min-h-[580px]"
+          className="lg:col-span-8 bg-white rounded-xl border border-[#E7EAF0] shadow-xs relative overflow-hidden min-h-[380px] sm:min-h-[480px] lg:min-h-[580px] max-w-full"
         >
           {/* Subtle Canvas Watermark & Helper */}
-          <div className="absolute top-3 left-4 pointer-events-none flex items-center gap-2 text-[12px] text-[#687386]">
-            <Network className="w-4 h-4 text-[#6259E8]" />
-            <span className="font-semibold text-[#172033]">Knowledge Topology</span>
-            <span>· Drag nodes to arrange, scroll to zoom, click to inspect</span>
+          <div className="absolute top-3 left-3 sm:left-4 pointer-events-none flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-[12px] text-[#687386] bg-white/80 backdrop-blur-xs px-2 py-0.5 rounded-md border border-[#E7EAF0]/60 max-w-[calc(100%-24px)] truncate">
+            <Network className="w-3.5 h-3.5 text-[#6259E8] shrink-0" />
+            <span className="font-semibold text-[#172033] shrink-0">Topology</span>
+            <span className="truncate hidden xs:inline">· Drag to pan, scroll to zoom, click node</span>
           </div>
 
           <svg 
             ref={svgRef} 
-            className="w-full h-[580px] select-none"
+            className="w-full h-[380px] sm:h-[480px] lg:h-[580px] select-none"
           />
 
           {/* Legend strip at bottom of canvas */}
-          <div className="absolute bottom-3 left-3 right-3 bg-white/90 backdrop-blur-md py-1.5 px-3 rounded-lg border border-[#E7EAF0] flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#687386]">
-            <div className="flex items-center gap-3">
+          <div className="absolute bottom-2 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3 bg-white/95 backdrop-blur-md py-1 px-2 sm:py-1.5 sm:px-3 rounded-lg border border-[#E7EAF0] flex items-center justify-between gap-2 text-[10px] sm:text-[11px] text-[#687386] overflow-x-auto no-scrollbar">
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0">
               <span className="flex items-center gap-1">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#6259E8]" />
-                <span>Core Hub</span>
+                <span>Hub</span>
               </span>
               <span className="flex items-center gap-1">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#5247D7]" />
@@ -556,7 +558,7 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
                 <span>Bottleneck</span>
               </span>
             </div>
-            <span>{graphData.nodes.length} nodes · {graphData.links.length} relationships</span>
+            <span className="shrink-0">{graphData.nodes.length} nodes · {graphData.links.length} links</span>
           </div>
         </div>
 

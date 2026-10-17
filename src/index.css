@@ -6,16 +6,53 @@
     --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   }
 
+  html {
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden !important;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
     font-family: var(--font-geist);
     background-color: #F8F9FC;
     color: #172033;
-    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden !important;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  img, svg, video, canvas, audio, iframe {
+    max-width: 100%;
   }
 
   code, pre, kbd {
     font-family: var(--font-mono);
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
+}
+
+/* Hide scrollbar on mobile scrollable bars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* 3D Card Flip styles */

@@ -166,10 +166,10 @@ export const PaperInputCard: React.FC<PaperInputCardProps> = ({
   };
 
   return (
-    <div className="bg-white rounded-2xl border border-[#E7EAF0] p-6 shadow-xs space-y-5">
+    <div className="bg-white rounded-2xl border border-[#E7EAF0] p-4 sm:p-6 shadow-xs space-y-4 sm:space-y-5 max-w-full overflow-hidden">
       
       {/* Title & Mode Switcher */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-3 border-b border-[#E7EAF0]">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 sm:gap-3 pb-3 border-b border-[#E7EAF0]">
         <div>
           <h2 className="text-[17px] font-bold text-[#172033] flex items-center gap-2">
             <FileUp className="w-5 h-5 text-[#6259E8]" />
@@ -336,7 +336,7 @@ export const PaperInputCard: React.FC<PaperInputCardProps> = ({
       )}
 
       {/* Main Action Bar */}
-      <div className="flex items-center justify-between pt-1">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 pt-1">
         <span className="text-[11px] text-[#687386] hidden sm:inline">
           Single click triggers all 4 outputs (50w summary, Roman Urdu, 10 words, 5 questions)
         </span>
@@ -345,7 +345,7 @@ export const PaperInputCard: React.FC<PaperInputCardProps> = ({
           type="button"
           onClick={() => handleGenerate()}
           disabled={isLoading}
-          className="inline-flex items-center gap-2 px-6 h-[42px] text-[14px] font-bold text-white bg-[#6259E8] hover:bg-[#5147D8] disabled:opacity-50 disabled:cursor-not-allowed rounded-lg shadow-sm shadow-[#6259E8]/25 transition-all active:scale-[0.99] ml-auto"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 h-[42px] text-[14px] font-bold text-white bg-[#6259E8] hover:bg-[#5147D8] disabled:opacity-50 disabled:cursor-not-allowed rounded-lg shadow-sm shadow-[#6259E8]/25 transition-all active:scale-[0.99] sm:ml-auto"
         >
           {isLoading ? (
             <>

@@ -2,6 +2,7 @@
   "name": "Paper to Prep",
   "description": "Transform dense academic manuscripts into intuitive, structured study environments with executive summaries, concept breakdowns, flashcards, audio briefings, and practice tests.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
-
