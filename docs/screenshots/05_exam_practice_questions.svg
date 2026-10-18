@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%" style="background:#F7F7F3; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#172033" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Top Header Bar -->
+  <rect x="0" y="0" width="1200" height="64" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1"/>
+  <g transform="translate(48, 16)">
+    <rect x="0" y="2" width="28" height="28" rx="6" fill="#5548E0"/>
+    <path d="M7 23 L21 23 L14 9 Z" fill="#FFFFFF" opacity="0.9"/>
+    <text x="38" y="22" font-size="18" font-weight="700" fill="#191D24">Paper to Prep</text>
+    <text x="165" y="22" font-size="12" font-weight="400" fill="#68707D">| Section 4: Grounded Exam Practice Questions</text>
+  </g>
+
+  <!-- Main Canvas Container -->
+  <g transform="translate(90, 84)">
+    
+    <!-- Section Title & Counter -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="76" height="22" rx="4" fill="#EEEDFC"/>
+      <text x="38" y="15" font-size="11" font-weight="700" fill="#5548E0" text-anchor="middle">SECTION 4</text>
+      <text x="88" y="16" font-size="18" font-weight="700" fill="#191D24">5 Examination Practice Questions &amp; Grounded Answers</text>
+      <text x="540" y="16" font-size="12" fill="#68707D">Directly verified against manuscript experimental benchmarks</text>
+      
+      <rect x="880" y="-4" width="140" height="26" rx="6" fill="#E6F4EA"/>
+      <text x="950" y="13" font-size="11.5" font-weight="700" fill="#137333" text-anchor="middle">5 Questions Grounded</text>
+    </g>
+
+    <!-- Stack of Question Accordion Cards -->
+
+    <!-- Question 1: Expanded -->
+    <g transform="translate(0, 48)">
+      <rect x="0" y="0" width="1020" height="152" rx="10" fill="#FFFFFF" stroke="#5548E0" stroke-width="1.5" filter="url(#shadow)"/>
+      <g transform="translate(24, 22)">
+        <!-- Question Header Row -->
+        <rect x="0" y="0" width="94" height="22" rx="4" fill="#EEEDFC"/>
+        <text x="47" y="15" font-size="11" font-weight="700" fill="#5548E0" text-anchor="middle">CONCEPTUAL</text>
+
+        <text x="108" y="16" font-size="15" font-weight="700" fill="#191D24">Q1. What is the fundamental degradation problem encountered in very deep convolutional neural networks?</text>
+
+        <!-- Grounded Answer Box -->
+        <g transform="translate(0, 36)">
+          <rect x="0" y="0" width="972" height="74" rx="8" fill="#FAF9F5"/>
+          <text x="20" y="24" font-size="13" font-weight="700" fill="#137333">Grounded Answer:</text>
+          <text x="20" y="46" font-size="13" fill="#191D24" line-height="20">
+            <tspan x="20" dy="0">As depth increases, accuracy saturates and degrades rapidly due to optimization difficulties rather than overfitting,</tspan>
+            <tspan x="20" dy="20">demonstrated by deeper unreferenced plain networks exhibiting higher training error than their shallower counterparts.</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Question 2 -->
+    <g transform="translate(0, 216)">
+      <rect x="0" y="0" width="1020" height="136" rx="10" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+      <g transform="translate(24, 22)">
+        <rect x="0" y="0" width="100" height="22" rx="4" fill="#F2F2ED"/>
+        <text x="50" y="15" font-size="11" font-weight="700" fill="#68707D" text-anchor="middle">METHODOLOGY</text>
+
+        <text x="114" y="16" font-size="15" font-weight="700" fill="#191D24">Q2. How do identity shortcut connections mathematically reformulate the layer mapping?</text>
+
+        <g transform="translate(0, 36)">
+          <rect x="0" y="0" width="972" height="60" rx="8" fill="#FAF9F5"/>
+          <text x="20" y="24" font-size="13" font-weight="700" fill="#137333">Grounded Answer:</text>
+          <text x="20" y="44" font-size="13" fill="#191D24">Instead of optimizing H(x), layers optimize the residual F(x) = H(x) - x, yielding H(x) = F(x) + x via parameter-free additions.</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Question 3 -->
+    <g transform="translate(0, 368)">
+      <rect x="0" y="0" width="1020" height="136" rx="10" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+      <g transform="translate(24, 22)">
+        <rect x="0" y="0" width="96" height="22" rx="4" fill="#F2F2ED"/>
+        <text x="48" y="15" font-size="11" font-weight="700" fill="#68707D" text-anchor="middle">KEY FINDINGS</text>
+
+        <text x="110" y="16" font-size="15" font-weight="700" fill="#191D24">Q3. What empirical benchmark result did the 152-layer ResNet achieve on the ImageNet dataset?</text>
+
+        <g transform="translate(0, 36)">
+          <rect x="0" y="0" width="972" height="60" rx="8" fill="#FAF9F5"/>
+          <text x="20" y="24" font-size="13" font-weight="700" fill="#137333">Grounded Answer:</text>
+          <text x="20" y="44" font-size="13" fill="#191D24">The 152-layer ResNet ensemble achieved a 3.57% top-5 error on ImageNet, winning 1st place in the ILSVRC 2015 competition.</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Question 4 Collapsed Peek -->
+    <g transform="translate(0, 520)">
+      <rect x="0" y="0" width="1020" height="48" rx="10" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1"/>
+      <g transform="translate(24, 14)">
+        <rect x="0" y="0" width="96" height="20" rx="4" fill="#F2F2ED"/>
+        <text x="48" y="14" font-size="10.5" font-weight="700" fill="#68707D" text-anchor="middle">COMPLEXITY</text>
+        <text x="110" y="15" font-size="14" font-weight="600" fill="#191D24">Q4. How does the FLOP complexity of ResNet-152 compare to prior models like VGG-19?</text>
+        <text x="960" y="15" font-size="13" fill="#5548E0" text-anchor="end">Expand ▼</text>
+      </g>
+    </g>
+
+  </g>
+</svg>

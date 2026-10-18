@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%" style="background:#F7F7F3; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#172033" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Top Header Bar -->
+  <rect x="0" y="0" width="1200" height="64" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1"/>
+  <g transform="translate(48, 16)">
+    <rect x="0" y="2" width="28" height="28" rx="6" fill="#5548E0"/>
+    <path d="M7 23 L21 23 L14 9 Z" fill="#FFFFFF" opacity="0.9"/>
+    <text x="38" y="22" font-size="18" font-weight="700" fill="#191D24">Paper to Prep</text>
+    <text x="165" y="22" font-size="12" font-weight="400" fill="#68707D">| Section 3: Difficult Words Dictionary</text>
+  </g>
+
+  <!-- Main Canvas Container -->
+  <g transform="translate(90, 84)">
+    
+    <!-- Section Title & Counter -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="76" height="22" rx="4" fill="#EEEDFC"/>
+      <text x="38" y="15" font-size="11" font-weight="700" fill="#5548E0" text-anchor="middle">SECTION 3</text>
+      <text x="88" y="16" font-size="18" font-weight="700" fill="#191D24">10 Difficult Words Dictionary</text>
+      <text x="360" y="16" font-size="12" fill="#68707D">Contextual academic terminology with authentic Roman Urdu meanings</text>
+      
+      <rect x="880" y="-4" width="140" height="26" rx="6" fill="#EEEDFC"/>
+      <text x="950" y="13" font-size="11.5" font-weight="700" fill="#5548E0" text-anchor="middle">10 Terms Extracted</text>
+    </g>
+
+    <!-- 2-Column Grid of Vocabulary Cards -->
+    
+    <!-- Card 1 -->
+    <g transform="translate(0, 48)">
+      <rect x="0" y="0" width="498" height="160" rx="10" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+      <g transform="translate(20, 20)">
+        <text x="0" y="16" font-size="15" font-weight="700" fill="#191D24">1. Residual Mapping</text>
+        <rect x="360" y="0" width="98" height="20" rx="4" fill="#EEEDFC"/>
+        <text x="409" y="14" font-size="10.5" font-weight="600" fill="#5548E0" text-anchor="middle">Foundational</text>
+        
+        <text x="0" y="42" font-size="12" font-weight="600" fill="#5548E0">Roman Urdu: <tspan font-weight="400" fill="#191D24">Bacha hua ya farq ka function jo layers seekhti hain.</tspan></text>
+        <text x="0" y="66" font-size="12" fill="#4A5568">Context: Fitting F(x) = H(x) - x rather than the unreferenced direct mapping.</text>
+        <rect x="0" y="86" width="458" height="40" rx="6" fill="#FAF9F5"/>
+        <text x="12" y="104" font-size="11" font-style="italic" fill="#68707D">"We explicitly reformulate the layers as learning residual functions..."</text>
+      </g>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(522, 48)">
+      <rect x="0" y="0" width="498" height="160" rx="10" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+      <g transform="translate(20, 20)">
+        <text x="0" y="16" font-size="15" font-weight="700" fill="#191D24">2. Identity Shortcut</text>
+        <rect x="375" y="0" width="83" height="20" rx="4" fill="#EEEDFC"/>
+        <text x="416.5" y="14" font-size="10.5" font-weight="600" fill="#5548E0" text-anchor="middle">Architecture</text>
+        
+        <text x="0" y="42" font-size="12" font-weight="600" fill="#5548E0">Roman Urdu: <tspan font-weight="400" fill="#191D24">Baghair tabdeeli ke input ko aagay bhejna (skip connection).</tspan></text>
+        <text x="0" y="66" font-size="12" fill="#4A5568">Context: Parameter-free connection adding input x directly to layer output F(x).</text>
+        <rect x="0" y="86" width="458" height="40" rx="6" fill="#FAF9F5"/>
+        <text x="12" y="104" font-size="11" font-style="italic" fill="#68707D">"...shortcut connections simply perform identity mapping..."</text>
+      </g>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(0, 224)">
+      <rect x="0" y="0" width="498" height="160" rx="10" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+      <g transform="translate(20, 20)">
+        <text x="0" y="16" font-size="15" font-weight="700" fill="#191D24">3. Degradation Problem</text>
+        <rect x="368" y="0" width="90" height="20" rx="4" fill="#EEEDFC"/>
+        <text x="413" y="14" font-size="10.5" font-weight="600" fill="#5548E0" text-anchor="middle">Optimization</text>
+        
+        <text x="0" y="42" font-size="12" font-weight="600" fill="#5548E0">Roman Urdu: <tspan font-weight="400" fill="#191D24">Gehrai barhnay se training accuracy ka gir jana.</tspan></text>
+        <text x="0" y="66" font-size="12" fill="#4A5568">Context: Unexpected accuracy saturation and drop as network depth extends.</text>
+        <rect x="0" y="86" width="458" height="40" rx="6" fill="#FAF9F5"/>
+        <text x="12" y="104" font-size="11" font-style="italic" fill="#68707D">"With network depth increasing, accuracy gets saturated and degrades rapidly."</text>
+      </g>
+    </g>
+
+    <!-- Card 4 -->
+    <g transform="translate(522, 224)">
+      <rect x="0" y="0" width="498" height="160" rx="10" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+      <g transform="translate(20, 20)">
+        <text x="0" y="16" font-size="15" font-weight="700" fill="#191D24">4. Vanishing Gradient</text>
+        <rect x="380" y="0" width="78" height="20" rx="4" fill="#EEEDFC"/>
+        <text x="419" y="14" font-size="10.5" font-weight="600" fill="#5548E0" text-anchor="middle">Theory</text>
+        
+        <text x="0" y="42" font-size="12" font-weight="600" fill="#5548E0">Roman Urdu: <tspan font-weight="400" fill="#191D24">Gradients ka intihayi chhota ho kar khatam ho jana.</tspan></text>
+        <text x="0" y="66" font-size="12" fill="#4A5568">Context: Loss of backpropagation signals in earlier deep network layers.</text>
+        <rect x="0" y="86" width="458" height="40" rx="6" fill="#FAF9F5"/>
+        <text x="12" y="104" font-size="11" font-style="italic" fill="#68707D">"...largely addressed by normalized initialization and intermediate normalization..."</text>
+      </g>
+    </g>
+
+    <!-- Card 5 & 6 Sneak Peek Strip -->
+    <g transform="translate(0, 400)">
+      <rect x="0" y="0" width="498" height="150" rx="10" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+      <g transform="translate(20, 20)">
+        <text x="0" y="16" font-size="15" font-weight="700" fill="#191D24">5. Batch Normalization</text>
+        <text x="0" y="42" font-size="12" font-weight="600" fill="#5548E0">Roman Urdu: <tspan font-weight="400" fill="#191D24">Batches ko normalize kar ke training mustahkam karna.</tspan></text>
+        <text x="0" y="66" font-size="12" fill="#4A5568">Context: Applied after each conv layer and before activation.</text>
+        <rect x="0" y="84" width="458" height="36" rx="6" fill="#FAF9F5"/>
+        <text x="12" y="102" font-size="11" font-style="italic" fill="#68707D">"We adopt batch normalization (BN) right after each convolution..."</text>
+      </g>
+    </g>
+
+    <g transform="translate(522, 400)">
+      <rect x="0" y="0" width="498" height="150" rx="10" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+      <g transform="translate(20, 20)">
+        <text x="0" y="16" font-size="15" font-weight="700" fill="#191D24">6. Bottleneck Architecture</text>
+        <text x="0" y="42" font-size="12" font-weight="600" fill="#5548E0">Roman Urdu: <tspan font-weight="400" fill="#191D24">Dimensions kam kar ke computation bachane ka tareeqa.</tspan></text>
+        <text x="0" y="66" font-size="12" fill="#4A5568">Context: 1x1, 3x3, 1x1 convolution stacks reducing computation.</text>
+        <rect x="0" y="84" width="458" height="36" rx="6" fill="#FAF9F5"/>
+        <text x="12" y="102" font-size="11" font-style="italic" fill="#68707D">"A 3-layer bottleneck block uses 1x1 convolutions for dimension reduction..."</text>
+      </g>
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background:#F7F7F3; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#172033" flood-opacity="0.06"/>
+    </filter>
+    <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5548E0"/>
+      <stop offset="100%" stop-color="#7C70FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Top Navigation Header -->
+  <rect x="0" y="0" width="1200" height="64" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1"/>
+  <g transform="translate(48, 16)">
+    <rect x="0" y="2" width="28" height="28" rx="6" fill="#5548E0"/>
+    <path d="M7 23 L21 23 L14 9 Z" fill="#FFFFFF" opacity="0.9"/>
+    <text x="38" y="22" font-size="18" font-weight="700" fill="#191D24" letter-spacing="-0.3">Paper to Prep</text>
+    <text x="165" y="22" font-size="12" font-weight="400" fill="#68707D">| Active Synthesis Workspace</text>
+  </g>
+
+  <!-- Main Canvas Container -->
+  <g transform="translate(120, 110)">
+    
+    <!-- Hero Card Box -->
+    <rect x="0" y="0" width="960" height="460" rx="14" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+    
+    <g transform="translate(48, 40)">
+      <text x="0" y="22" font-size="20" font-weight="700" fill="#191D24">Synthesizing Educational Resources</text>
+      <text x="0" y="44" font-size="13" font-weight="400" fill="#68707D">Manuscript: "Deep Residual Learning for Image Recognition" · 152 Layers ResNet</text>
+    </g>
+
+    <!-- Active Loading Container -->
+    <g transform="translate(48, 110)">
+      <rect x="0" y="0" width="864" height="150" rx="12" fill="#FAF9F5" stroke="#5548E0" stroke-opacity="0.3" stroke-width="1.5"/>
+
+      <!-- Header row inside progress box -->
+      <g transform="translate(24, 28)">
+        <!-- Spinner & Stage title -->
+        <circle cx="10" cy="10" r="8" fill="none" stroke="#5548E0" stroke-width="2.5" stroke-dasharray="35" stroke-dashoffset="10"/>
+        <text x="30" y="15" font-size="14.5" font-weight="600" fill="#191D24">Stage 3: Translating summary into natural Roman Urdu...</text>
+
+        <!-- Elapsed counter badge & percentage -->
+        <g transform="translate(720, 0)">
+          <rect x="-80" y="-4" width="84" height="26" rx="6" fill="#EEEDFC"/>
+          <text x="-38" y="13" font-size="11.5" font-family="monospace" font-weight="700" fill="#5548E0" text-anchor="middle">8s elapsed</text>
+          <text x="24" y="14" font-size="13" font-family="monospace" font-weight="700" fill="#5548E0">74%</text>
+        </g>
+      </g>
+
+      <!-- Animated Progress Bar -->
+      <g transform="translate(24, 70)">
+        <rect x="0" y="0" width="816" height="8" rx="4" fill="#E8E8E2"/>
+        <rect x="0" y="0" width="604" height="8" rx="4" fill="url(#progressGrad)"/>
+      </g>
+
+      <!-- Bottom helper message -->
+      <g transform="translate(24, 106)">
+        <text x="0" y="14" font-size="12" fill="#68707D">⚡ Multimodal Google Gemini synthesis running server-side (thinkingBudget: 0)</text>
+        <text x="816" y="14" font-size="12" fill="#68707D" text-anchor="end">Typically completes in 8–14 seconds</text>
+      </g>
+    </g>
+
+    <!-- 4 Milestones Checklist Track -->
+    <g transform="translate(48, 300)">
+      <!-- Step 1 Complete -->
+      <g transform="translate(0, 0)">
+        <circle cx="14" cy="14" r="14" fill="#E6F4EA"/>
+        <path d="M8 14 L12 18 L20 10" stroke="#137333" stroke-width="2" fill="none"/>
+        <text x="38" y="14" font-size="12.5" font-weight="600" fill="#191D24">Extracting Structure &amp; Figures</text>
+        <text x="38" y="28" font-size="11" fill="#68707D">Completed · 2.1s</text>
+      </g>
+
+      <!-- Step 2 Complete -->
+      <g transform="translate(220, 0)">
+        <circle cx="14" cy="14" r="14" fill="#E6F4EA"/>
+        <path d="M8 14 L12 18 L20 10" stroke="#137333" stroke-width="2" fill="none"/>
+        <text x="38" y="14" font-size="12.5" font-weight="600" fill="#191D24">Exact 50-Word English Summary</text>
+        <text x="38" y="28" font-size="11" fill="#68707D">Completed · 50 words verified</text>
+      </g>
+
+      <!-- Step 3 Active -->
+      <g transform="translate(450, 0)">
+        <circle cx="14" cy="14" r="14" fill="#EEEDFC" stroke="#5548E0" stroke-width="1.5"/>
+        <circle cx="14" cy="14" r="5" fill="#5548E0"/>
+        <text x="38" y="14" font-size="12.5" font-weight="600" fill="#5548E0">Roman Urdu Voice Synthesis</text>
+        <text x="38" y="28" font-size="11" fill="#5548E0">In progress...</text>
+      </g>
+
+      <!-- Step 4 Pending -->
+      <g transform="translate(680, 0)">
+        <circle cx="14" cy="14" r="14" fill="#F2F2ED"/>
+        <text x="14" y="18" font-size="11" font-weight="600" fill="#68707D" text-anchor="middle">4</text>
+        <text x="38" y="14" font-size="12.5" font-weight="600" fill="#68707D">10 Vocab &amp; 5 Exam Questions</text>
+        <text x="38" y="28" font-size="11" fill="#9AA2B1">Queued next</text>
+      </g>
+    </g>
+
+    <!-- Bottom Button state -->
+    <g transform="translate(712, 386)">
+      <rect x="0" y="0" width="200" height="42" rx="8" fill="#5548E0" opacity="0.6"/>
+      <circle cx="34" cy="21" r="7" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="25" stroke-dashoffset="8"/>
+      <text x="50" y="26" font-size="13.5" font-weight="600" fill="#FFFFFF">Generating Kit...</text>
+    </g>
+
+  </g>
+</svg>

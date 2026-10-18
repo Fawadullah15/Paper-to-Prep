@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="100%" height="100%" style="background:#F7F7F3; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#172033" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Top Header Bar -->
+  <rect x="0" y="0" width="1200" height="64" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1"/>
+  <g transform="translate(48, 16)">
+    <rect x="0" y="2" width="28" height="28" rx="6" fill="#5548E0"/>
+    <path d="M7 23 L21 23 L14 9 Z" fill="#FFFFFF" opacity="0.9"/>
+    <text x="38" y="22" font-size="18" font-weight="700" fill="#191D24">Paper to Prep</text>
+    <text x="165" y="22" font-size="12" font-weight="400" fill="#68707D">| Generated Study Kit</text>
+  </g>
+
+  <!-- Main Canvas Container -->
+  <g transform="translate(90, 84)">
+    
+    <!-- Results Header -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="1020" height="52" rx="8" fill="#EEEDFC" stroke="#5548E0" stroke-opacity="0.2"/>
+      <circle cx="28" cy="26" r="10" fill="#137333"/>
+      <path d="M23 26 L26 29 L33 22" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+      <text x="48" y="31" font-size="14" font-weight="600" fill="#191D24">Your study kit is ready: <tspan font-weight="700" fill="#5548E0">"Deep Residual Learning for Image Recognition"</tspan></text>
+      <text x="990" y="31" font-size="12" font-weight="500" fill="#5548E0" text-anchor="end">4 Resources Generated</text>
+    </g>
+
+    <!-- Section 1 Card: 50-Word English Summary -->
+    <g transform="translate(0, 68)">
+      <rect x="0" y="0" width="1020" height="210" rx="12" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+      
+      <g transform="translate(32, 28)">
+        <!-- Section Tag -->
+        <rect x="0" y="0" width="76" height="22" rx="4" fill="#F2F2ED"/>
+        <text x="38" y="15" font-size="11" font-weight="700" fill="#68707D" text-anchor="middle">SECTION 1</text>
+
+        <text x="88" y="16" font-size="17" font-weight="700" fill="#191D24">50-Word English Summary</text>
+        
+        <!-- Word count badge -->
+        <g transform="translate(840, 0)">
+          <rect x="-10" y="-2" width="120" height="26" rx="13" fill="#E6F4EA" stroke="#137333" stroke-width="1"/>
+          <text x="50" y="15" font-size="11.5" font-weight="700" fill="#137333" text-anchor="middle">✓ 50 / 50 words</text>
+        </g>
+
+        <!-- Summary Body Text -->
+        <g transform="translate(0, 44)">
+          <rect x="0" y="0" width="956" height="106" rx="8" fill="#FAF9F5"/>
+          <text x="24" y="32" font-size="14.5" font-weight="400" fill="#191D24" line-height="24">
+            <tspan x="24" dy="0">Deeper neural networks face optimization difficulties, causing performance degradation. To resolve this</tspan>
+            <tspan x="24" dy="24">problem, this paper introduces a residual learning framework that reformulates layers to learn residual</tspan>
+            <tspan x="24" dy="24">functions referencing inputs. Consequently, extremely deep networks up to 152 layers train easily,</tspan>
+            <tspan x="24" dy="24" font-weight="600" fill="#5548E0">achieving a 3.57% ImageNet test error rate and securing first place in ILSVRC 2015.</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Section 2 Card: Roman Urdu Translation with Voice Playback -->
+    <g transform="translate(0, 300)">
+      <rect x="0" y="0" width="1020" height="280" rx="12" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+      
+      <g transform="translate(32, 28)">
+        <!-- Section Tag -->
+        <rect x="0" y="0" width="76" height="22" rx="4" fill="#EEEDFC"/>
+        <text x="38" y="15" font-size="11" font-weight="700" fill="#5548E0" text-anchor="middle">SECTION 2</text>
+
+        <text x="88" y="16" font-size="17" font-weight="700" fill="#191D24">Roman Urdu Summary &amp; Voice Narration</text>
+        <text x="440" y="16" font-size="12" font-weight="500" fill="#68707D">Authentic Pakistani Roman Urdu (Latin Script)</text>
+
+        <!-- Built-in Audio Player Bar -->
+        <g transform="translate(0, 40)">
+          <rect x="0" y="0" width="956" height="56" rx="8" fill="#F4F3FF" stroke="#5548E0" stroke-opacity="0.25" stroke-width="1"/>
+          
+          <!-- Play Button -->
+          <circle cx="34" cy="28" r="18" fill="#5548E0"/>
+          <polygon points="31,21 41,28 31,35" fill="#FFFFFF"/>
+          
+          <text x="64" y="33" font-size="13" font-weight="600" fill="#5548E0">Play Roman Urdu Narration</text>
+          
+          <!-- Waveform / Scrubber Bar -->
+          <rect x="260" y="25" width="400" height="6" rx="3" fill="#E0DDFA"/>
+          <rect x="260" y="25" width="180" height="6" rx="3" fill="#5548E0"/>
+          <circle cx="440" cy="28" r="6" fill="#5548E0"/>
+          <text x="674" y="32" font-size="11.5" font-family="monospace" fill="#68707D">01:14 / 02:40</text>
+
+          <!-- Speed Controls -->
+          <g transform="translate(775, 14)">
+            <rect x="0" y="0" width="40" height="28" rx="5" fill="#FFFFFF" stroke="#E0DDFA"/>
+            <text x="20" y="18" font-size="11" font-weight="600" fill="#68707D" text-anchor="middle">0.75x</text>
+
+            <rect x="46" y="0" width="40" height="28" rx="5" fill="#5548E0"/>
+            <text x="66" y="18" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1.0x</text>
+
+            <rect x="92" y="0" width="40" height="28" rx="5" fill="#FFFFFF" stroke="#E0DDFA"/>
+            <text x="112" y="18" font-size="11" font-weight="600" fill="#68707D" text-anchor="middle">1.25x</text>
+
+            <rect x="138" y="0" width="40" height="28" rx="5" fill="#FFFFFF" stroke="#E0DDFA"/>
+            <text x="158" y="18" font-size="11" font-weight="600" fill="#68707D" text-anchor="middle">1.5x</text>
+          </g>
+        </g>
+
+        <!-- Urdu Text Content -->
+        <g transform="translate(0, 114)">
+          <rect x="0" y="0" width="956" height="110" rx="8" fill="#FAF9F5"/>
+          <text x="24" y="32" font-size="14" font-weight="400" fill="#191D24" line-height="24">
+            <tspan x="24" dy="0">Gehray neural networks mein gehrai barhnay se training mushkil ho jati hai aur karkardagi mutasir hoti hai.</tspan>
+            <tspan x="24" dy="24">Is ahem maslay ke hal ke liye yeh tehqeeq residual learning framework muta'arif karwati hai jahan layers ko</tspan>
+            <tspan x="24" dy="24">input ke hawalay se residual functions seekhnay ke liye dhabla jata hai. Nateejan, 152 layers tak ke networks</tspan>
+            <tspan x="24" dy="24">ba-asani train ho kar 3.57% test error ke sath ImageNet muqablay mein pehli position hasil kartay hain.</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+
+  </g>
+</svg>

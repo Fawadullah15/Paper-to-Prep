@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%" style="background:#F7F7F3; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#172033" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Top Header Bar -->
+  <rect x="0" y="0" width="1200" height="64" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1"/>
+  <g transform="translate(48, 16)">
+    <rect x="0" y="2" width="28" height="28" rx="6" fill="#5548E0"/>
+    <path d="M7 23 L21 23 L14 9 Z" fill="#FFFFFF" opacity="0.9"/>
+    <text x="38" y="22" font-size="18" font-weight="700" fill="#191D24">Paper to Prep</text>
+    <text x="165" y="22" font-size="12" font-weight="400" fill="#68707D">| 3D SRS Flashcards &amp; Practice Quiz</text>
+  </g>
+
+  <!-- Main Canvas Container (Two Columns: Left Flashcards 520px, Right Quiz 520px) -->
+  <g transform="translate(60, 84)">
+    
+    <!-- LEFT PANEL: 3D SRS Flashcards -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="520" height="560" rx="12" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+      
+      <g transform="translate(24, 24)">
+        <text x="0" y="16" font-size="11" font-weight="700" fill="#5548E0">SPACED REPETITION SYSTEM (SRS)</text>
+        <text x="0" y="40" font-size="18" font-weight="700" fill="#191D24">Active Recall Flashcards</text>
+        <text x="470" y="40" font-size="12" font-family="monospace" fill="#68707D" text-anchor="end">Card 2 of 5</text>
+
+        <!-- 3D Flip Card Container -->
+        <g transform="translate(0, 60)">
+          <rect x="0" y="0" width="472" height="260" rx="12" fill="#FAF9F5" stroke="#5548E0" stroke-width="1.5"/>
+          
+          <g transform="translate(24, 24)">
+            <rect x="0" y="0" width="100" height="20" rx="4" fill="#EEEDFC"/>
+            <text x="50" y="14" font-size="10.5" font-weight="600" fill="#5548E0" text-anchor="middle">ARCHITECTURE</text>
+
+            <text x="0" y="56" font-size="15" font-weight="700" fill="#191D24">Question (Front):</text>
+            <text x="0" y="80" font-size="13.5" fill="#4A5568" line-height="22">
+              <tspan x="0" dy="0">Do identity shortcut connections introduce</tspan>
+              <tspan x="0" dy="22">extra parameters or computational complexity?</tspan>
+            </text>
+
+            <line x1="0" y1="116" x2="424" y2="116" stroke="#E8E8E2"/>
+
+            <text x="0" y="140" font-size="14" font-weight="700" fill="#137333">Answer (Back):</text>
+            <text x="0" y="162" font-size="13" font-weight="500" fill="#191D24" line-height="20">
+              <tspan x="0" dy="0">No. Identity shortcut connections simply perform</tspan>
+              <tspan x="0" dy="20">element-wise addition without introducing any</tspan>
+              <tspan x="0" dy="20">extra parameters or multiplication operations.</tspan>
+            </text>
+
+            <text x="424" y="222" font-size="11" font-weight="500" fill="#9AA2B1" text-anchor="end">Press Space to flip ↺</text>
+          </g>
+        </g>
+
+        <!-- Rating Buttons (Anki / SM-2) -->
+        <g transform="translate(0, 340)">
+          <text x="0" y="16" font-size="12" font-weight="600" fill="#68707D">Rate Recall Interval:</text>
+          
+          <g transform="translate(0, 26)">
+            <rect x="0" y="0" width="110" height="42" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-opacity="0.3"/>
+            <text x="55" y="20" font-size="11.5" font-weight="700" fill="#DC2626" text-anchor="middle">Again (1)</text>
+            <text x="55" y="34" font-size="10" fill="#DC2626" text-anchor="middle">&lt; 10 min</text>
+
+            <rect x="120" y="0" width="110" height="42" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-opacity="0.3"/>
+            <text x="175" y="20" font-size="11.5" font-weight="700" fill="#D97706" text-anchor="middle">Hard (2)</text>
+            <text x="175" y="34" font-size="10" fill="#D97706" text-anchor="middle">1 day</text>
+
+            <rect x="240" y="0" width="110" height="42" rx="6" fill="#DCFCE7" stroke="#16A34A" stroke-opacity="0.3"/>
+            <text x="295" y="20" font-size="11.5" font-weight="700" fill="#16A34A" text-anchor="middle">Good (3)</text>
+            <text x="295" y="34" font-size="10" fill="#16A34A" text-anchor="middle">3 days</text>
+
+            <rect x="360" y="0" width="112" height="42" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-opacity="0.3"/>
+            <text x="416" y="20" font-size="11.5" font-weight="700" fill="#2563EB" text-anchor="middle">Easy (4)</text>
+            <text x="416" y="34" font-size="10" fill="#2563EB" text-anchor="middle">7 days</text>
+          </g>
+        </g>
+
+        <!-- Anki / Notion Export Shortcut -->
+        <g transform="translate(0, 440)">
+          <rect x="0" y="0" width="472" height="40" rx="6" fill="#F2F2ED"/>
+          <text x="236" y="25" font-size="12" font-weight="600" fill="#191D24" text-anchor="middle">📥 Export Deck as Anki TSV or Obsidian Markdown</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- RIGHT PANEL: Board-Exam Practice Quiz -->
+    <g transform="translate(560, 0)">
+      <rect x="0" y="0" width="520" height="560" rx="12" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+      
+      <g transform="translate(24, 24)">
+        <text x="0" y="16" font-size="11" font-weight="700" fill="#5548E0">EXAMINATION ASSESSMENT</text>
+        <text x="0" y="40" font-size="18" font-weight="700" fill="#191D24">Multiple-Choice Practice Quiz</text>
+        <text x="470" y="40" font-size="12" font-family="monospace" fill="#137333" font-weight="700" text-anchor="end">Score: 4/5 (80%)</text>
+
+        <!-- Question Prompt -->
+        <g transform="translate(0, 60)">
+          <text x="0" y="16" font-size="13.5" font-weight="700" fill="#191D24" line-height="20">
+            <tspan x="0" dy="0">Question 3: What error rate was achieved by the 152-layer</tspan>
+            <tspan x="0" dy="20">ResNet ensemble on the ImageNet test benchmark?</tspan>
+          </text>
+        </g>
+
+        <!-- Options List -->
+        <g transform="translate(0, 116)">
+          <!-- Option A (Correct Selected) -->
+          <rect x="0" y="0" width="472" height="54" rx="8" fill="#E6F4EA" stroke="#137333" stroke-width="1.5"/>
+          <circle cx="28" cy="27" r="10" fill="#137333"/>
+          <text x="28" y="31" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+          <text x="50" y="26" font-size="13" font-weight="600" fill="#137333">A. 3.57% top-5 error rate (1st place ILSVRC 2015)</text>
+          <text x="50" y="42" font-size="11" fill="#137333">Verified in manuscript experimental benchmarks table</text>
+
+          <!-- Option B -->
+          <rect x="0" y="66" width="472" height="42" rx="8" fill="#FAF9F5" stroke="#E8E8E2"/>
+          <circle cx="28" cy="21" r="9" fill="none" stroke="#68707D" stroke-width="1.5"/>
+          <text x="28" y="25" font-size="10.5" font-weight="600" fill="#68707D" text-anchor="middle">B</text>
+          <text x="50" y="26" font-size="12.5" fill="#4A5568">B. 7.32% top-5 error rate on VGG-19 baseline</text>
+
+          <!-- Option C -->
+          <rect x="0" y="118" width="472" height="42" rx="8" fill="#FAF9F5" stroke="#E8E8E2"/>
+          <circle cx="28" cy="21" r="9" fill="none" stroke="#68707D" stroke-width="1.5"/>
+          <text x="28" y="25" font-size="10.5" font-weight="600" fill="#68707D" text-anchor="middle">C</text>
+          <text x="50" y="26" font-size="12.5" fill="#4A5568">C. 1.25% top-1 error rate under 200 epochs</text>
+
+          <!-- Option D -->
+          <rect x="0" y="170" width="472" height="42" rx="8" fill="#FAF9F5" stroke="#E8E8E2"/>
+          <circle cx="28" cy="21" r="9" fill="none" stroke="#68707D" stroke-width="1.5"/>
+          <text x="28" y="25" font-size="10.5" font-weight="600" fill="#68707D" text-anchor="middle">D</text>
+          <text x="50" y="26" font-size="12.5" fill="#4A5568">D. Unreported metric due to hardware constraints</text>
+        </g>
+
+        <!-- Rationale Feedback Box -->
+        <g transform="translate(0, 350)">
+          <rect x="0" y="0" width="472" height="80" rx="8" fill="#FAF9F5" stroke="#137333" stroke-opacity="0.3"/>
+          <text x="16" y="22" font-size="12" font-weight="700" fill="#137333">Explanation &amp; Citation Anchor:</text>
+          <text x="16" y="42" font-size="11.5" fill="#4A5568" line-height="16">
+            <tspan x="16" dy="0">Section 4.1 explicitly documents that an ensemble of 152-layer</tspan>
+            <tspan x="16" dy="16">residual nets achieved 3.57% top-5 error on the ImageNet test set,</tspan>
+            <tspan x="16" dy="16">winning first place on the ILSVRC 2015 classification task.</tspan>
+          </text>
+        </g>
+
+        <!-- Next Question Button -->
+        <g transform="translate(352, 450)">
+          <rect x="0" y="0" width="120" height="36" rx="6" fill="#5548E0"/>
+          <text x="60" y="23" font-size="12.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">Next Question →</text>
+        </g>
+      </g>
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background:#F7F7F3; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#172033" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Top Navigation Header -->
+  <rect x="0" y="0" width="1200" height="64" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1"/>
+  <g transform="translate(48, 16)">
+    <!-- Origami Bird Emblem -->
+    <rect x="0" y="2" width="28" height="28" rx="6" fill="#5548E0"/>
+    <path d="M7 23 L21 23 L14 9 Z" fill="#FFFFFF" opacity="0.9"/>
+    <text x="38" y="22" font-size="18" font-weight="700" fill="#191D24" letter-spacing="-0.3">Paper to Prep</text>
+    <text x="165" y="22" font-size="12" font-weight="400" fill="#68707D">| Understand Research. Prepare Smarter.</text>
+  </g>
+
+  <g transform="translate(980, 18)">
+    <rect x="0" y="0" width="90" height="28" rx="6" fill="#EEEDFC" stroke="#5548E0" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="45" y="18" font-size="11" font-weight="600" fill="#5548E0" text-anchor="middle">4-in-1 Kit</text>
+    <rect x="100" y="0" width="72" height="28" rx="6" fill="#F2F2ED"/>
+    <text x="136" y="18" font-size="11" font-weight="500" fill="#191D24" text-anchor="middle">Export</text>
+  </g>
+
+  <!-- Main Canvas Container -->
+  <g transform="translate(120, 96)">
+    
+    <!-- Hero Card Box -->
+    <rect x="0" y="0" width="960" height="520" rx="14" fill="#FFFFFF" stroke="#E8E8E2" stroke-width="1" filter="url(#shadow)"/>
+    
+    <!-- Card Header -->
+    <g transform="translate(36, 32)">
+      <text x="0" y="22" font-size="22" font-weight="700" fill="#191D24" letter-spacing="-0.4">Create your study kit</text>
+      <text x="0" y="44" font-size="13" font-weight="400" fill="#68707D">Bring a research paper. Leave with a clearer understanding.</text>
+
+      <!-- Segmented Mode Switcher -->
+      <g transform="translate(680, 0)">
+        <rect x="0" y="0" width="208" height="36" rx="8" fill="#F2F2ED"/>
+        <!-- Active Tab: Paste Text -->
+        <rect x="3" y="3" width="100" height="30" rx="6" fill="#FFFFFF" filter="url(#shadow)"/>
+        <text x="53" y="22" font-size="12" font-weight="600" fill="#191D24" text-anchor="middle">📄 Paste Text</text>
+        <text x="156" y="22" font-size="12" font-weight="500" fill="#68707D" text-anchor="middle">☁️ Upload PDF</text>
+      </g>
+    </g>
+
+    <line x1="36" y1="104" x2="924" y2="104" stroke="#E8E8E2" stroke-width="1"/>
+
+    <!-- Text Input Area -->
+    <g transform="translate(36, 124)">
+      <text x="0" y="14" font-size="12" font-weight="600" fill="#191D24">Manuscript Abstract, Methodology, or Full Text</text>
+      <text x="888" y="14" font-size="11" font-family="monospace" fill="#5548E0" text-anchor="end">112 words · 734 chars · Ready</text>
+
+      <!-- Textarea Box -->
+      <rect x="0" y="26" width="888" height="210" rx="10" fill="#FAF9F5" stroke="#5548E0" stroke-width="1.5"/>
+      
+      <!-- Textarea Content -->
+      <text x="20" y="56" font-size="13.5" font-weight="400" fill="#191D24" line-height="24">
+        <tspan x="20" dy="0" font-weight="600">Deep Residual Learning for Image Recognition.</tspan>
+        <tspan x="20" dy="24" fill="#4A5568">Deeper neural networks are more difficult to train. We present a residual learning framework to ease</tspan>
+        <tspan x="20" dy="24" fill="#4A5568">the training of networks that are substantially deeper than those used previously. We explicitly reformulate</tspan>
+        <tspan x="20" dy="24" fill="#4A5568">the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced</tspan>
+        <tspan x="20" dy="24" fill="#4A5568">functions. Empirical evidence shows these residual networks are easier to optimize and gain accuracy from depth.</tspan>
+        <tspan x="20" dy="24" fill="#4A5568">On ImageNet we evaluate residual nets with up to 152 layers—achieving 3.57% error and 1st place in ILSVRC 2015.</tspan>
+      </text>
+
+      <!-- Sample Presets Toolbar -->
+      <g transform="translate(0, 252)">
+        <text x="0" y="16" font-size="11" font-weight="600" fill="#68707D">Try sample:</text>
+        <rect x="74" y="0" width="130" height="24" rx="5" fill="#EEEDFC"/>
+        <text x="139" y="16" font-size="11" font-weight="600" fill="#5548E0" text-anchor="middle">ResNet (Deep Learning)</text>
+
+        <rect x="214" y="0" width="126" height="24" rx="5" fill="#EEEDFC"/>
+        <text x="277" y="16" font-size="11" font-weight="600" fill="#5548E0" text-anchor="middle">Transformer (Attention)</text>
+
+        <rect x="350" y="0" width="120" height="24" rx="5" fill="#EEEDFC"/>
+        <text x="410" y="16" font-size="11" font-weight="600" fill="#5548E0" text-anchor="middle">AlphaFold (Proteins)</text>
+      </g>
+    </g>
+
+    <!-- Bottom Action Bar -->
+    <line x1="36" y1="428" x2="924" y2="428" stroke="#E8E8E2" stroke-width="1"/>
+    <g transform="translate(36, 448)">
+      <text x="0" y="24" font-size="12" font-weight="500" fill="#68707D">
+        <tspan font-weight="600" fill="#191D24">Includes:</tspan>
+        <tspan fill="#68707D">  50-word summary  ·  Roman Urdu audio  ·  10 difficult words  ·  5 practice questions</tspan>
+      </text>
+
+      <!-- Primary Generate Button -->
+      <g transform="translate(680, 0)">
+        <rect x="0" y="0" width="208" height="42" rx="8" fill="#5548E0" filter="url(#shadow)"/>
+        <text x="104" y="26" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">✨ Generate Study Kit →</text>
+      </g>
+    </g>
+
+  </g>
+</svg>
