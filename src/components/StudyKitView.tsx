@@ -274,7 +274,7 @@ export const StudyKitView: React.FC<StudyKitViewProps> = ({
   // Download Markdown (.MD)
   const handleDownloadMarkdown = () => {
     let content = `# Study Guide: ${studyKit.paperTitle}\n\n`;
-    content += `*Generated with [Paper to Prep](https://paper-to-prep.ai.studio/) on ${new Date(studyKit.generatedAt).toLocaleDateString()}*\n\n`;
+    content += `*Generated with [Paper to Prep](https://paper-to-prep.vercel.app/) on ${new Date(studyKit.generatedAt).toLocaleDateString()}*\n\n`;
     content += `## 1. English Summary\n\n> ${studyKit.englishSummary}\n\n`;
     content += `*Word Count: ${studyKit.wordCount} words*\n\n`;
     content += `## 2. Roman Urdu Translation\n\n> ${studyKit.romanUrduSummary}\n\n`;
