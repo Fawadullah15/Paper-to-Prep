@@ -1,6 +1,6 @@
 {
   "name": "Paper to Prep",
-  "description": "Transform dense academic manuscripts into intuitive, structured study environments with executive summaries, concept breakdowns, flashcards, audio briefings, and practice tests.",
+  "description": "Turn any research paper into an exact 50-word English summary, natural Roman Urdu audio narration, 10 difficult words dictionary, and 5 grounded exam questions.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

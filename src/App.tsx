@@ -75,6 +75,14 @@ export default function App() {
     setActiveTab('studykit');
     setReviewedCards({});
     setQuizScore(null);
+
+    // Smoothly scroll to the results so the user immediately sees the generated study kit
+    setTimeout(() => {
+      const el = document.getElementById('study-kit-results-container') || document.getElementById('section-summary');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 150);
   };
 
   const handlePaperSynthesized = (newPaper: PaperData) => {
@@ -194,8 +202,8 @@ export default function App() {
               setIsLoading={setIsGenerating}
             />
 
-            {/* Segmented View Switcher Tabs (Enclosed segmented pill track with #F8F9FC background) */}
-            <div className="bg-[#F1F3FF] p-1 rounded-xl border border-[#E7EAF0] flex items-center overflow-x-auto no-scrollbar shadow-2xs max-w-full touch-pan-x">
+            {/* Segmented View Switcher Tabs */}
+            <div className="bg-[#F2F2ED] p-1 rounded-lg border border-[#E8E8E2] flex items-center overflow-x-auto no-scrollbar max-w-full touch-pan-x">
               {[
                 { id: 'studykit', label: 'Study Kit (4-in-1)', icon: Sparkles },
                 { id: 'summary', label: 'Summary', icon: FileText },
@@ -212,19 +220,19 @@ export default function App() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id as StudyTab)}
-                    className={`shrink-0 min-w-max px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg text-[12px] sm:text-[13px] flex items-center justify-center gap-1.5 transition-all ${
+                    className={`shrink-0 min-w-max px-3 py-1.5 rounded-md text-[13px] flex items-center justify-center gap-1.5 transition-colors ${
                       isActive
-                        ? 'bg-white text-[#172033] font-semibold shadow-xs'
-                        : 'text-[#687386] hover:text-[#172033]'
+                        ? 'bg-white text-[#191D24] font-semibold shadow-xs'
+                        : 'text-[#68707D] hover:text-[#191D24]'
                     }`}
                   >
-                    <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#6259E8]' : 'text-[#687386]'}`} />
+                    <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#5548E0]' : 'text-[#68707D]'}`} />
                     <span>{tab.label}</span>
                     {tab.count !== undefined && (
-                      <span className={`text-[10px] sm:text-[11px] px-1.5 py-0.2 rounded-full font-mono ${
-                        isActive ? 'bg-[#F0EEFF] text-[#6259E8]' : 'bg-[#E7EAF0] text-[#687386]'
+                      <span className={`text-[11px] font-mono tabular-nums ${
+                        isActive ? 'text-[#5548E0] font-semibold' : 'text-[#68707D]'
                       }`}>
-                        {tab.count}
+                        ({tab.count})
                       </span>
                     )}
                   </button>
@@ -233,13 +241,16 @@ export default function App() {
             </div>
 
             {/* Active Tab View Rendering */}
-            <div className="transition-all animate-in fade-in duration-150">
+            <div id="study-kit-results-container" className="transition-all animate-in fade-in duration-150 scroll-mt-24">
               {activeTab === 'studykit' && (
                 currentPaper.studyKit ? (
                   <StudyKitView
                     studyKit={currentPaper.studyKit}
                     isFocusMode={isFocusMode}
                     onExploreModule={(tab) => setActiveTab(tab as StudyTab)}
+                    onStartNewPaper={() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                   />
                 ) : (
                   <div className="bg-white rounded-xl border border-[#E7EAF0] p-8 text-center space-y-3">

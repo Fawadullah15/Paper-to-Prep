@@ -183,7 +183,7 @@ export const AudioStudyBar: React.FC<AudioStudyBarProps> = ({ audio, paperTitle 
 
   return (
     <div className="fixed bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 md:left-8 md:right-8 lg:left-auto lg:right-8 lg:w-[680px] max-w-[calc(100vw-16px)] z-50 transition-all">
-      <div className="relative bg-[#F0EEFF]/95 backdrop-blur-[12px] border border-[#6259E8]/20 rounded-[14px] p-2.5 sm:p-3.5 shadow-lg shadow-[#172033]/08 transition-all max-w-full overflow-hidden">
+      <div className="relative bg-white/95 backdrop-blur-[12px] border border-[#E5E7ED] rounded-[14px] p-2.5 sm:p-3.5 shadow-lg shadow-[#191D2A]/06 transition-all max-w-full overflow-hidden">
         
         {/* Top Header Row of Audio Bar */}
         <div className="flex items-center justify-between gap-2 sm:gap-3 mb-2">
